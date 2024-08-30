@@ -1,0 +1,353 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Laura Martínez",
+      "correo": "laura.martinez@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Administrador",
+      "empresa": null
+    },
+    {
+      "id": "3",
+      "nombre": "Elena Rodríguez",
+      "correo": "elena.rodriguez@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "4",
+      "nombre": "Andrés López",
+      "correo": "andres.lopez@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "5",
+      "nombre": "Natalia Torres",
+      "correo": "natalia.torres@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "6",
+      "nombre": "Ricardo Pérez",
+      "correo": "ricardo.perez@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Vendedor",
+      "empresa": "Dulces Colombianos S.A."
+    },
+    {
+      "id": "7",
+      "nombre": "Sofía Ramírez",
+      "correo": "sofia.ramirez@ejemplo.com",
+      "contraseña": "hashed_password_here",
+      "rol": "Vendedor",
+      "empresa": "Sabores Auténticos"
+    },
+    {
+      "id": "8",
+      "nombre": "Felipe Sanchez",
+      "correo": "f@gmail.com",
+      "contraseña": "F1145sanchez@",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "9",
+      "nombre": "Juan Pablo",
+      "correo": "j@gmail.con",
+      "contraseña": "Juan@@123",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "10",
+      "nombre": "Narly Sanchez",
+      "correo": "n@gmail.com",
+      "contraseña": "F1145sanchez@",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "11",
+      "nombre": "Narly Sanchez",
+      "correo": "narly@gmail.com",
+      "contraseña": "N123narly@",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "1ad3",
+      "nombre": "Felipe Sanchez",
+      "correo": "f@gmail.com",
+      "contraseña": "default_password",
+      "rol": "Vendedor"
+    },
+    {
+      "id": 13,
+      "nombre": "narly sanchez 5",
+      "correo": "nar@gmail.com",
+      "contraseña": "F12345@@",
+      "rol": "Cliente",
+      "empresa": null
+    }
+  ],
+  "productos": [
+    {
+      "name": "Cocada",
+      "price": 8000,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Dulce de Ñame",
+      "price": 8000,
+      "category": "Dulces Tradicionales",
+      "region": "Caribe",
+      "image": "http://localhost:3002/name.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Alegría",
+      "price": 3000,
+      "category": "Dulces Tradicionales",
+      "region": "Caribe",
+      "image": "http://localhost:3002/alegria.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Dulce de Coco",
+      "price": 8000,
+      "category": "Dulces de Frutas",
+      "region": "Insular",
+      "image": "http://localhost:3002/dulcecoco.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Torta de Tres Leches",
+      "price": 30000,
+      "category": "Postres",
+      "region": "Insular",
+      "image": "http://localhost:3002/tresleches.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Dulce de Tamarindo",
+      "price": 6000,
+      "category": "Dulces de Frutas",
+      "region": "Insular",
+      "image": "http://localhost:3002/dulcetamarindo.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Dulce de Papaya",
+      "price": 8000,
+      "category": "Dulces de Frutas",
+      "region": "Pacífica",
+      "image": "http://localhost:3002/dulcepapaya.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Dulce de Piña",
+      "price": 10000,
+      "category": "Dulces de Frutas",
+      "region": "Pacífica",
+      "image": "http://localhost:3002/dulcepina.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Dulce de Chontaduro",
+      "price": 12000,
+      "category": "Dulces de Frutas",
+      "region": "Pacífica",
+      "image": "http://localhost:3002/dulcechontaduro.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Arequipe",
+      "price": 10000,
+      "category": "Dulces Tradicionales",
+      "region": "Andina",
+      "image": "http://localhost:3002/arequipe.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Natilla",
+      "price": 12000,
+      "category": "Postres",
+      "region": "Andina",
+      "image": "http://localhost:3002/natilla.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Manjar Blanco",
+      "price": 15000,
+      "category": "Dulces Tradicionales",
+      "region": "Andina",
+      "image": "http://localhost:3002/manjar-blanco.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Buñuelo",
+      "price": 15000,
+      "category": "Dulces de Harina",
+      "region": "Andina",
+      "image": "http://localhost:3002/bunuelo.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Almojábana",
+      "price": 12000,
+      "category": "Dulces de Harina",
+      "region": "Andina",
+      "image": "http://localhost:3002/almojabana.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Pandebono",
+      "price": 10000,
+      "category": "Dulces de Harina",
+      "region": "Andina",
+      "image": "http://localhost:3002/pandebono.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Dulce de Marañón",
+      "price": 12000,
+      "category": "Dulces de Frutas",
+      "region": "Orinoquia",
+      "image": "http://localhost:3002/dulce-de-maranon.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Dulce de Corozo",
+      "price": 8000,
+      "category": "Dulces de Frutas",
+      "region": "Orinoquia",
+      "image": "http://localhost:3002/dulce-de-corozo.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Dulce de Moriche",
+      "price": 15000,
+      "category": "Dulces de Frutas",
+      "region": "Orinoquia",
+      "image": "http://localhost:3002/dulce-de-moriche.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Dulce de Copoazú",
+      "price": 20000,
+      "category": "Dulces de Frutas",
+      "region": "Amazónica",
+      "image": "http://localhost:3002/dulce-de-copoazu.jpg"
+    },
+    {
+      "name": "Dulce de Camu Camu",
+      "price": 18000,
+      "id": "20"
+    },
+    {
+      "id": "d57e",
+      "name": "Chocorramo",
+      "price": 3000
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "2",
+      "usuario": "José González",
+      "productos": [
+        {
+          "id": 7,
+          "name": "Dulce de Papaya",
+          "quantity": 3
+        }
+      ],
+      "total": 24000,
+      "estado": "Pendiente"
+    },
+    {
+      "id": "3",
+      "usuario": "Elena Rodríguez",
+      "productos": [
+        {
+          "id": 11,
+          "name": "Natilla",
+          "quantity": 2
+        },
+        {
+          "id": 13,
+          "name": "Buñuelo",
+          "quantity": 1
+        }
+      ],
+      "total": 39000,
+      "estado": "Entregado"
+    },
+    {
+      "id": "7553",
+      "usuario": "Juan Torres",
+      "total": "50000",
+      "estado": "Enviado"
+    },
+    {
+      "id": "6832",
+      "usuario": "Narly",
+      "total": "5000",
+      "estado": "Enviando"
+    }
+  ],
+  "ventas": [
+    {
+      "id": "1",
+      "vendedor": "Ricardo Pérez",
+      "productos": [
+        {
+          "id": 1,
+          "name": "Cocada",
+          "quantity": 10
+        },
+        {
+          "id": 6,
+          "name": "Dulce de Tamarindo",
+          "quantity": 5
+        }
+      ],
+      "total": 80000,
+      "fecha": "2023-05-01"
+    },
+    {
+      "id": "3",
+      "vendedor": "Ricardo Pérez",
+      "productos": [
+        {
+          "id": 10,
+          "name": "Arequipe",
+          "quantity": 6
+        },
+        {
+          "id": 12,
+          "name": "Manjar Blanco",
+          "quantity": 4
+        }
+      ],
+      "total": 90000,
+      "fecha": "2023-06-01"
+    },
+    {
+      "id": "06c6",
+      "vendedor": "Paula Andrea",
+      "total": "30000"
+    },
+    {
+      "id": "62bc",
+      "vendedor": "Juan Pablo",
+      "total": "800000"
+    }
+  ]
+}

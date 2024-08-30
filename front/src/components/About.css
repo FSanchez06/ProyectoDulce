@@ -1,0 +1,34 @@
+.about-section {
+    padding: 40px; /* Aumentar el padding para separar del borde */
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  .about-content {
+    display: flex; /* Usar flexbox para alinear imagen y texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espacio entre imagen y texto */
+  }
+  
+  .about-image {
+    width: 300px; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .about-text {
+    max-width: 600px; /* Limitar el ancho del texto */
+  }
+  
+  .about-section h2 {
+    font-size: 28px;
+    color: #003087; /* Azul representativo de la bandera de Colombia */
+    margin-bottom: 10px;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    color: #333; /* Color del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+  }
+  

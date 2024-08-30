@@ -1,0 +1,21 @@
+.product-list {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.product-list-title {
+  font-size: 28px;
+  color: #003087;
+  margin-bottom: 20px;
+  display: inline-block; /* Asegura que el título tome solo el espacio necesario */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+.product-list-items { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Mantener los productos centrados */
+  gap: 20px;
+}

@@ -1,0 +1,79 @@
+.ventas-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ventas-container h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.ventas-container form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ventas-container form input {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.ventas-container form button {
+    padding: 8px;
+    border: none;
+    background-color: #ffc107;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ventas-container form button:hover {
+    background-color: #e0a800;
+}
+
+.ventas-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.ventas-container ul li {
+    margin-bottom: 8px;
+    padding: 1px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.ventas-container ul li button {
+    margin-left: 8px;
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ventas-container ul li button:hover {
+    background-color: #c0392b;
+}

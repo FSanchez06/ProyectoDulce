@@ -1,0 +1,85 @@
+.usuarios-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Permite que ocupe toda la altura disponible */
+}
+
+.usuarios-container h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.usuarios-container form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Espacio entre el formulario y la lista */
+}
+
+.usuarios-container form input,
+.usuarios-container form select {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9; /* Color de fondo claro para los inputs */
+}
+
+.usuarios-container form button {
+    padding: 8px;
+    border: none;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.usuarios-container form button:hover {
+    background-color: #2ecc71;
+}
+
+.usuarios-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Elimina el margen */
+    flex-grow: 1; /* Permite que la lista ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+
+.usuarios-container ul li {
+    margin-bottom: 8px;
+    padding: 1px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente */
+    font-size: 14px;
+}
+
+.usuarios-container ul li button {
+    margin-left: 8px;
+    width: 50px;
+    height: 30px; /* Ajusta la altura del botón */
+    padding: 0; /* Asegúrate de que no haya relleno extra */
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usuarios-container ul li button:hover {
+    background-color: #c0392b;
+}

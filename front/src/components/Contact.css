@@ -1,0 +1,60 @@
+.contact-section {
+    padding: 40px; /* Espacio alrededor de la sección */
+    margin-top: 20px; /* Espacio superior */
+    text-align: center; /* Centrar el título y el formulario */
+  }
+  
+  .contact-section h2 {
+    font-size: 28px;
+    color: #003087; /* Azul representativo de la bandera de Colombia */
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    width: 100%; /* Ancho completo */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Espacio inferior entre los grupos de formulario */
+  }
+  
+  .form-group label {
+    display: block; /* Mostrar el label en una nueva línea */
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Espacio inferior del label */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 20px); /* Ancho completo menos el padding */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+  }
+  
+  button {
+    display: block; /* Mostrar el botón en una nueva línea */
+    width: 100%; /* Ancho completo */
+    background-color: #C8102E; /* Rojo representativo de la bandera de Colombia */
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  button:hover {
+    background-color: #A7001D; /* Rojo más oscuro al pasar el mouse */
+  }
+  
