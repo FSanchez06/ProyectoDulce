@@ -1,37 +1,37 @@
 .usuarios-container {
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Permite que ocupe toda la altura disponible */
+    height: auto;
 }
 
 .usuarios-container h1 {
     margin-bottom: 15px;
     font-size: 20px;
-    text-align: center; /* Centra el título */
+    text-align: center;
 }
 
-.usuarios-container form {
+.form-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Espacio entre el formulario y la lista */
+    margin-bottom: 20px;
 }
 
-.usuarios-container form input,
-.usuarios-container form select {
-    margin-bottom: 8px;
-    padding: 8px;
+.form-container input,
+.form-container select {
+    margin-bottom: 10px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    background-color: #f9f9f9; /* Color de fondo claro para los inputs */
+    background-color: #f9f9f9;
 }
 
-.usuarios-container form button {
-    padding: 8px;
+.form-container button.submit-button {
+    padding: 10px;
     border: none;
     background-color: #27ae60;
     color: white;
@@ -40,46 +40,53 @@
     font-size: 14px;
 }
 
-.usuarios-container form button:hover {
+.form-container button.submit-button:hover {
     background-color: #2ecc71;
 }
 
-.usuarios-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; /* Elimina el margen */
-    flex-grow: 1; /* Permite que la lista ocupe el espacio restante */
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.usuarios-container ul li {
-    margin-bottom: 8px;
-    padding: 1px;
-    background-color: #ecf0f1;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alinea los elementos verticalmente */
+.table-container th, .table-container td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
     font-size: 14px;
 }
 
-.usuarios-container ul li button {
-    margin-left: 8px;
-    width: 50px;
-    height: 30px; /* Ajusta la altura del botón */
-    padding: 0; /* Asegúrate de que no haya relleno extra */
+.table-container th {
+    font-size: 14px;
+}
+
+.table-container td button.password-button,
+.table-container td button.edit-button,
+.table-container td button.delete-button {
+    padding: 6px 12px;
     border: none;
-    background-color: #e74c3c;
-    color: white;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 12px;
+    margin-right: 5px;
 }
 
-.usuarios-container ul li button:hover {
-    background-color: #c0392b;
+.table-container td button.password-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.table-container td button.edit-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.table-container td button.delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.table-container td button:hover {
+    opacity: 0.8;
 }

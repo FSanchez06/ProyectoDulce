@@ -1,11 +1,11 @@
 .productos-container {
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
 }
 
 .productos-container h1 {
@@ -14,13 +14,13 @@
     text-align: center;
 }
 
-.productos-container form {
+.form-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.productos-container form input {
+.form-container input {
     margin-bottom: 8px;
     padding: 8px;
     border: 1px solid #ccc;
@@ -29,7 +29,7 @@
     background-color: #f9f9f9;
 }
 
-.productos-container form button {
+.form-container button.submit-button {
     padding: 8px;
     border: none;
     background-color: #28a745;
@@ -39,41 +39,56 @@
     font-size: 14px;
 }
 
-.productos-container form button:hover {
+.form-container button.submit-button:hover {
     background-color: #218838;
 }
 
-.productos-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
+.productos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.productos-container ul li {
-    margin-bottom: 8px;
-    padding: 1px;
-    background-color: #ecf0f1;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.productos-table th, .productos-table td {
+    border: 1px solid black; /* Bordes negros para las celdas */
+    padding: 10px;
+    text-align: left;
     font-size: 14px;
 }
 
-.productos-container ul li button {
+.productos-table th {
+    background-color: #f2f2f2; /* Color de fondo para el encabezado */
+}
+
+.productos-table td {
+    vertical-align: middle; /* Alinear el contenido verticalmente */
+}
+
+.product-image {
+    max-width: 100px; /* Limitar el tamaño de la imagen */
+    max-height: 100px; /* Limitar la altura de la imagen */
+}
+
+.productos-table td button.edit-button,
+.productos-table td button.delete-button {
     margin-left: 8px;
-    width: 50px;
-    height: 30px;
-    padding: 0;
+    padding: 4px 8px; /* Relleno reducido para los botones */
     border: none;
-    background-color: #e74c3c;
-    color: white;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.productos-container ul li button:hover {
-    background-color: #c0392b;
+.productos-table td button.edit-button {
+    background-color: #f39c12; /* Color para el botón de editar */
+    color: white;
+}
+
+.productos-table td button.delete-button {
+    background-color: #e74c3c; /* Color para el botón de eliminar */
+    color: white;
+}
+
+.productos-table td button:hover {
+    opacity: 0.8; /* Efecto hover para los botones */
 }

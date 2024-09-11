@@ -6,8 +6,11 @@ const Usuarios = () => {
     const [usuarios, setUsuarios] = useState([]);
     const [nombre, setNombre] = useState('');
     const [correo, setCorreo] = useState('');
+    const [contraseña, setContraseña] = useState('');
     const [rol, setRol] = useState('Cliente');
+    const [empresa, setEmpresa] = useState('');
     const [id, setId] = useState(null);
+    const [mostrarContraseña, setMostrarContraseña] = useState({});
 
     useEffect(() => {
         const fetchUsuarios = async () => {
@@ -23,51 +26,76 @@ const Usuarios = () => {
 
     const handleAddUser = async (e) => {
         e.preventDefault();
-        const newUser = { nombre, correo, contraseña: 'default_password', rol }; // Asigna una contraseña por defecto
-        await axios.post('http://localhost:3002/usuarios', newUser);
-        setUsuarios([...usuarios, newUser]);
-        resetForm();
+        if (!nombre || !correo || !contraseña) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+        const newUser = { nombre, correo, contraseña, rol, empresa };
+        try {
+            const response = await axios.post('http://localhost:3002/usuarios', newUser);
+            setUsuarios([...usuarios, response.data]);
+            resetForm();
+        } catch (error) {
+            console.error('Error al agregar el usuario:', error);
+            alert('Ocurrió un error al agregar el usuario. Inténtalo de nuevo más tarde.');
+        }
     };
 
     const handleEditUser = (usuario) => {
         setId(usuario.id);
         setNombre(usuario.nombre);
         setCorreo(usuario.correo);
+        setContraseña(usuario.contraseña);
         setRol(usuario.rol);
+        setEmpresa(usuario.empresa || '');
     };
 
     const handleUpdateUser = async (e) => {
         e.preventDefault();
+        if (!nombre || !correo || !contraseña) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
         try {
-            await axios.put(`http://localhost:3002/usuarios/${id}`, { nombre, correo, rol });
-            setUsuarios(usuarios.map(u => (u.id === id ? { ...u, nombre, correo, rol } : u)));
+            await axios.put(`http://localhost:3002/usuarios/${id}`, { nombre, correo, contraseña, rol, empresa });
+            setUsuarios(usuarios.map(u => (u.id === id ? { ...u, nombre, correo, contraseña, rol, empresa } : u)));
             resetForm();
         } catch (error) {
             console.error('Error al actualizar el usuario:', error);
-            if (error.response && error.response.status === 404) {
-                alert('No se encontró el usuario. Verifica el ID.');
-            } else {
-                alert('Ocurrió un error al actualizar el usuario. Inténtalo de nuevo más tarde.');
-            }
+            alert('Ocurrió un error al actualizar el usuario. Inténtalo de nuevo más tarde.');
         }
     };
 
     const handleDeleteUser = async (id) => {
-        await axios.delete(`http://localhost:3002/usuarios/${id}`);
-        setUsuarios(usuarios.filter(u => u.id !== id));
+        try {
+            await axios.delete(`http://localhost:3002/usuarios/${id}`);
+            setUsuarios(usuarios.filter(u => u.id !== id));
+        } catch (error) {
+            console.error('Error al eliminar el usuario:', error);
+            alert('Ocurrió un error al eliminar el usuario. Inténtalo de nuevo más tarde.');
+        }
     };
 
     const resetForm = () => {
         setNombre('');
         setCorreo('');
+        setContraseña('');
         setRol('Cliente');
+        setEmpresa('');
         setId(null);
+    };
+
+    const togglePasswordVisibility = (id) => {
+        setMostrarContraseña(prevState => ({
+            ...prevState,
+            [id]: !prevState[id]
+        }));
     };
 
     return (
         <div className="usuarios-container">
             <h1>CRUD Usuarios</h1>
-            <form onSubmit={id ? handleUpdateUser : handleAddUser}>
+            <form onSubmit={id ? handleUpdateUser : handleAddUser} className="form-container">
                 <input
                     type="text"
                     placeholder="Nombre"
@@ -80,24 +108,57 @@ const Usuarios = () => {
                     value={correo}
                     onChange={(e) => setCorreo(e.target.value)}
                 />
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    value={contraseña}
+                    onChange={(e) => setContraseña(e.target.value)}
+                />
                 <select value={rol} onChange={(e) => setRol(e.target.value)}>
                     <option value="Cliente">Cliente</option>
                     <option value="Vendedor">Vendedor</option>
                     <option value="Administrador">Administrador</option>
                 </select>
-                <button type="submit">{id ? 'Actualizar Usuario' : 'Agregar Usuario'}</button>
+                <input
+                    type="text"
+                    placeholder="Empresa (opcional)"
+                    value={empresa}
+                    onChange={(e) => setEmpresa(e.target.value)}
+                />
+                <button type="submit" className="submit-button">{id ? 'Actualizar Usuario' : 'Agregar Usuario'}</button>
             </form>
-            <ul>
-                {usuarios.map((usuario) => (
-                    <li key={usuario.id}>
-                        {usuario.nombre} - {usuario.correo} - {usuario.rol}
-                        <div>
-                            <button onClick={() => handleEditUser(usuario)}>Editar</button>
-                            <button onClick={() => handleDeleteUser(usuario.id)}>Eliminar</button>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            <table className="table-container">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Rol</th>
+                        <th>Empresa</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {usuarios.map((usuario) => (
+                        <tr key={usuario.id}>
+                            <td>{usuario.nombre}</td>
+                            <td>{usuario.correo}</td>
+                            <td>
+                                {mostrarContraseña[usuario.id] ? usuario.contraseña : '********'}
+                                <button onClick={() => togglePasswordVisibility(usuario.id)} className="password-button">
+                                    {mostrarContraseña[usuario.id] ? 'Ocultar' : 'Mostrar'}
+                                </button>
+                            </td>
+                            <td>{usuario.rol}</td>
+                            <td>{usuario.empresa || 'N/A'}</td>
+                            <td>
+                                <button onClick={() => handleEditUser(usuario)} className="edit-button">Editar</button>
+                                <button onClick={() => handleDeleteUser(usuario.id)} className="delete-button">Eliminar</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 };

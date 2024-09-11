@@ -13,8 +13,8 @@
       "nombre": "Elena Rodríguez",
       "correo": "elena.rodriguez@ejemplo.com",
       "contraseña": "hashed_password_here",
-      "rol": "Cliente",
-      "empresa": null
+      "rol": "Vendedor",
+      "empresa": "Paletas"
     },
     {
       "id": "4",
@@ -53,8 +53,8 @@
       "nombre": "Felipe Sanchez",
       "correo": "f@gmail.com",
       "contraseña": "F1145sanchez@",
-      "rol": "Cliente",
-      "empresa": null
+      "rol": "Vendedor",
+      "empresa": "Colombina"
     },
     {
       "id": "9",
@@ -88,10 +88,18 @@
       "rol": "Vendedor"
     },
     {
-      "id": 13,
+      "id": "13",
       "nombre": "narly sanchez 5",
       "correo": "nar@gmail.com",
       "contraseña": "F12345@@",
+      "rol": "Cliente",
+      "empresa": null
+    },
+    {
+      "id": "14",
+      "nombre": "Felipe Sanchez",
+      "correo": "felipesanchez@gmail.com",
+      "contraseña": "F145@@sanchez",
       "rol": "Cliente",
       "empresa": null
     }
@@ -100,6 +108,9 @@
     {
       "name": "Cocada",
       "price": 8000,
+      "category": "Dulces Tradicionales",
+      "region": "Caribe",
+      "image": "https://www.google.com/search?q=cocada&client=firefox-b-d&sca_esv=450070a99877800c&sxsrf=ADLYWII0NNVZQUWMaxowVUuC99rREKCvNw:1726073929981&udm=2&source=iu&ictx=1&vet=1&fir=AaSPWIdZtie-gM%252CGUwxpbTRosQ__M%252C%252Fm%252F0bbx1tk%253BjzdcGhHawmkBnM%252CXCgEDkoUzgfdNM%252C_%253BoyP-EhlyU3IWMM%252CfSTa1djahHz6VM%252C_%253B6WCIkgewCUNuAM%252C5BCwHYkP-_In8M%252C_%253Bft0ZXOAszjFInM%252CDI9fVKky2EEjqM%252C_%253Bn28FLgyktV8iuM%252C6mbxALFA7DxHGM%252C_&usg=AI4_-kSChyjkxe6Kl4yHhQOBRzIYyTatHA&sa=X&ved=2ahUKEwjclc-7rruIAxUbRUEAHZhXBlEQ_B16BAgsEAE#vhid=AaSPWIdZtie-gM&vssid=mosaic",
       "id": "1"
     },
     {
@@ -108,7 +119,7 @@
       "price": 8000,
       "category": "Dulces Tradicionales",
       "region": "Caribe",
-      "image": "http://localhost:3002/name.jpg"
+      "image": "https://example.com/dulce_de_name.jpg"
     },
     {
       "id": "3",
@@ -116,7 +127,7 @@
       "price": 3000,
       "category": "Dulces Tradicionales",
       "region": "Caribe",
-      "image": "http://localhost:3002/alegria.jpg"
+      "image": "https://example.com/alegria.jpg"
     },
     {
       "id": "4",
@@ -124,47 +135,15 @@
       "price": 8000,
       "category": "Dulces de Frutas",
       "region": "Insular",
-      "image": "http://localhost:3002/dulcecoco.jpg"
+      "image": "https://example.com/dulcecoco.jpg"
     },
     {
       "id": "5",
-      "name": "Torta de Tres Leches",
-      "price": 30000,
-      "category": "Postres",
-      "region": "Insular",
-      "image": "http://localhost:3002/tresleches.jpg"
-    },
-    {
-      "id": "6",
-      "name": "Dulce de Tamarindo",
-      "price": 6000,
-      "category": "Dulces de Frutas",
-      "region": "Insular",
-      "image": "http://localhost:3002/dulcetamarindo.jpg"
-    },
-    {
-      "id": "7",
-      "name": "Dulce de Papaya",
-      "price": 8000,
-      "category": "Dulces de Frutas",
-      "region": "Pacífica",
-      "image": "http://localhost:3002/dulcepapaya.jpg"
-    },
-    {
-      "id": "8",
-      "name": "Dulce de Piña",
-      "price": 10000,
-      "category": "Dulces de Frutas",
-      "region": "Pacífica",
-      "image": "http://localhost:3002/dulcepina.jpg"
-    },
-    {
-      "id": "9",
       "name": "Dulce de Chontaduro",
       "price": 12000,
       "category": "Dulces de Frutas",
       "region": "Pacífica",
-      "image": "http://localhost:3002/dulcechontaduro.jpg"
+      "image": "https://example.com/dulcechontaduro.jpg"
     },
     {
       "id": "10",
@@ -247,14 +226,28 @@
       "image": "http://localhost:3002/dulce-de-copoazu.jpg"
     },
     {
+      "id": "20",
       "name": "Dulce de Camu Camu",
       "price": 18000,
-      "id": "20"
+      "category": "Dulces de Frutas",
+      "region": "Amazónica",
+      "image": "http://localhost:3002/dulce_de_camu_camu.jpg"
     },
     {
       "id": "d57e",
       "name": "Chocorramo",
-      "price": 3000
+      "price": 3000,
+      "category": "Dulces Tradicionales",
+      "region": "Andina",
+      "image": "http://localhost:3002/chocorramo.jpg"
+    },
+    {
+      "id": "1bd4",
+      "name": "Colombina",
+      "price": 3000,
+      "category": "Chupeta",
+      "region": "Andina",
+      "image": "https://www.google.com/imgres?q=colombina&imgurl=https%3A%2F%2Fcolombinacontentmanager-prd.s3.us-east-1.amazonaws.com%2FDulces%2F7702011125835_A1N1_es.jpg&imgrefurl=https%3A%2F%2Fcolombina.com%2Fco-es%2Fproduct%2Fdetail%2F7702011125835%2Findex.html&docid=B0cRGteR3_ofNM&tbnid=lO_0sLgalQxMSM&vet=12ahUKEwipkOufsLuIAxWUTjABHaRPBo0QM3oECF4QAA..i&w=1000&h=1000&hcb=2&ved=2ahUKEwipkOufsLuIAxWUTjABHaRPBo0QM3oECF4QAA"
     }
   ],
   "pedidos": [
