@@ -1,0 +1,48 @@
+.cart-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+    margin-bottom: 15px;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item-image {
+    width: 100px; /* Ajusta según sea necesario */
+    height: auto;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Para que ocupe el espacio disponible */
+}
+
+.quantity-selector {
+    width: 50px; /* Ajusta según sea necesario */
+}
+
+.remove-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}

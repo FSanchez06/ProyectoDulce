@@ -1,15 +1,14 @@
-// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
-import { UserProvider } from './contexts/UserContext';
+import { UserProvider } from './contexts/UserContext'; // Importa el contexto del usuario
+import { CartProvider } from './contexts/CartContext'; // Importa el contexto del carrito
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <UserProvider>
-        <App />
+ReactDOM.render(
+    <UserProvider>
+        <CartProvider>
+            <App />
+        </CartProvider>
     </UserProvider>,
+    document.getElementById('root')
 );
-
-
