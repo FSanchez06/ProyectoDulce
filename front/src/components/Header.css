@@ -65,18 +65,17 @@ nav i {
 }
 
 .auth a {
+  background-color: #4CAF50; /* Verde para el botón */
   color: #FFFFFF; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
   text-decoration: none;
-  margin-right: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 8px 12px;
   border-radius: 4px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .auth a:hover {
-  color: #FFFFFF; /* Texto blanco */
   background-color: #C8102E; /* Rojo al pasar el mouse */
 }
 

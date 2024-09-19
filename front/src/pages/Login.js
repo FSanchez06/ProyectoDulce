@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
+import { UserContext } from '../contexts/UserContext';
+import Header from '../components/Header';
 
 const Login = () => {
+    const { setCurrentUser } = useContext(UserContext); // Usar el contexto
     const [isLoginActive, setIsLoginActive] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -41,19 +44,11 @@ const Login = () => {
         const user = usuarios.find(u => u.correo === email && u.contraseña === password);
 
         if (user) {
-            switch (user.rol) {
-                case 'Administrador':
-                    navigate('/dashboard-admin');
-                    break;
-                case 'Vendedor':
-                    navigate('/dashboard-vendedor');
-                    break;
-                case 'Cliente':
-                    navigate('/home');
-                    break;
-                default:
-                    setError('Rol no reconocido');
-            }
+            // Establecer el usuario actual en el contexto
+            setCurrentUser(user);
+
+            // Redirigir a la página principal después de iniciar sesión
+            navigate('/home');
         } else {
             setError('Credenciales incorrectas');
         }
@@ -112,6 +107,8 @@ const Login = () => {
     };
 
     return (
+        <>
+        <Header />
         <div className="login-container">
             <div className={`container ${isLoginActive ? '' : 'active'}`}>
                 <div className={`form-container sign-up ${isLoginActive ? 'hidden' : ''}`}>
@@ -163,6 +160,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
